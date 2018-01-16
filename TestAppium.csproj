@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21C2881E-A566-4083-B74A-82B9FF3C1270}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TestAppium</RootNamespace>
+    <AssemblyName>TestAppium</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium.Support.3.0.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="appium-dotnet-driver">
+      <HintPath>..\packages\Appium.WebDriver.3.0.0.2\lib\net45\appium-dotnet-driver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\HitList.app\HitList" />
+    <None Include="Resources\HitList.app\Info.plist" />
+    <None Include="Resources\HitList.app\PkgInfo" />
+    <None Include="Resources\HitList.app\libswiftRemoteMirror.dylib" />
+    <None Include="Resources\HitList.app\Base.lproj\LaunchScreen.storyboardc\01J-lp-oVM-view-Ze5-6b-2t3.nib" />
+    <None Include="Resources\HitList.app\Base.lproj\LaunchScreen.storyboardc\Info.plist" />
+    <None Include="Resources\HitList.app\Base.lproj\LaunchScreen.storyboardc\UIViewController-01J-lp-oVM.nib" />
+    <None Include="Resources\HitList.app\Base.lproj\Main.storyboardc\BYZ-38-t0r-view-8bC-Xf-vdC.nib" />
+    <None Include="Resources\HitList.app\Base.lproj\Main.storyboardc\Info.plist" />
+    <None Include="Resources\HitList.app\Base.lproj\Main.storyboardc\UINavigationController-PUb-h2-IMm.nib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftCore.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftCoreData.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftCoreFoundation.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftCoreGraphics.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftCoreImage.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftDarwin.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftDispatch.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftFoundation.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftMetal.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftObjectiveC.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftQuartzCore.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftSwiftOnoneSupport.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftUIKit.dylib" />
+    <None Include="Resources\HitList.app\Frameworks\libswiftos.dylib" />
+    <None Include="Resources\HitList.app\HitList.momd\HitList.mom" />
+    <None Include="Resources\HitList.app\HitList.momd\HitList.omo" />
+    <None Include="Resources\HitList.app\HitList.momd\VersionInfo.plist" />
+    <None Include="Resources\HitList.app\_CodeSignature\CodeResources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
