@@ -45,9 +45,11 @@
     <Reference Include="appium-dotnet-driver">
       <HintPath>..\packages\Appium.WebDriver.3.0.0.2\lib\net45\appium-dotnet-driver.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Pages\AppLocators.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -79,6 +81,11 @@
     <None Include="Resources\HitList.app\HitList.momd\HitList.omo" />
     <None Include="Resources\HitList.app\HitList.momd\VersionInfo.plist" />
     <None Include="Resources\HitList.app\_CodeSignature\CodeResources" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
